@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Api</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 40px; background: #f0f8ff; }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { color: #2c3e50; }
+        .search-form { margin: 30px 0; }
+        input[type="text"] { 
+            padding: 12px; 
+            width: 300px; 
+            border: 2px solid #3498db; 
+            border-radius: 4px; 
+            font-size: 16px;
+        }
+        button { 
+            padding: 12px 24px; 
+            background: #3498db; 
+            color: white; 
+            border: none; 
+            border-radius: 4px; 
+            font-size: 16px; 
+            cursor: pointer;
+        }
+        .quick-links { margin: 20px 0; }
+        .quick-btn { 
+            margin: 5px; 
+            padding: 10px 15px; 
+            background: #2ecc71; 
+            color: white; 
+            border: none; 
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Search for any country you want to see information about. </p>
+        <form action="/country" method="get">
+            <input type="text" name="name" placeholder="Please enter country name" required>
+            <button type="submit">Search</button>
+
+        </form>
+
+        <div class="quick-links">
+            <button class="quick-btn" onclick="window.location.href='?name=South Africa'">South Africa</button>
+            <button class="quick-btn" onclick="window.location.href='?name=Japan'">Japan</button>
+            <button class="quick-btn" onclick="window.location.href='?name=Canada'">Canada</button>
+
+        </div>
+        <p style="margin-top: 40px; font-size: 14px; color: #666;">
+            Data provided by <a href="https://restcountries.com">REST Countries API</a>
+        </p>
+    </div>
+
+    <script>
+        //simple javascript random button
+        document.addEventListener('DOMContentLoaded', function(){
+            document.getElementById('random-btn').addEventListener('click', function(){
+                window.location.href = '/random';
+            })
+        })
+        
+            
+    </script>
+</body>
+</html>

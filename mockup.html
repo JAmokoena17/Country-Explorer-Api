@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mockup</title>
+    <style>
+         body { font-family: Arial; padding: 20px; }
+        .search-box { margin: 20px 0; padding: 10px; width: 300px; }
+        button { padding: 10px 20px; background: blue; color: white; border: none; }
+        .country-card { border: 1px solid #ccc; padding: 20px; margin: 20px 0; }
+    </style>
+    
+</head>
+<body>
+    <h1>Country Explorer    </h1>
+    <form action="/country" method="Get">
+        <input type="text" name="name" placeholder="Enter your name" class="search-box" />
+        <button type="submit">Search</button>
+
+
+    </form>
+    <div>
+    <button onclick="window.location.href='?name=South Africa'">South Africa</button>
+    <button onclick="window.location.href='?name=Japan'">Japan</button>
+    <button onclick="window.location.href='?name=Canada'">Canada</button>
+    </div>
+     //what country might look like
+    <div class="country-card">
+        <h2>South Africa 🇿🇦</h2>
+        <p><strong>Capital:</strong> Pretoria</p>
+        <p><strong>Population:</strong> 59,308,690</p>
+        <p><strong>Currency:</strong> South African rand (ZAR)</p>
+        <p><strong>Languages:</strong> Afrikaans, English, Zulu, Xhosa, etc.</p>
+    </div>
+
+</body>
+</html>
